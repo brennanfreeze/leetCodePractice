@@ -31,7 +31,6 @@ def BruteForce(arrayValues):
 			
 	return False
 
-
 '''
 Possible Solution: Sort Array
 Time Complexity: O(nlogn)
@@ -71,8 +70,6 @@ def ConvertToSet(arrayValues):
 	setValues = set(arrayValues)
 
 	return not len(setValues) == arrayValues
-
-
 
 '''
 Possible Solution: Hashmap
