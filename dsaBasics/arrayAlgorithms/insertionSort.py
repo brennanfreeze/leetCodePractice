@@ -1,5 +1,6 @@
 '''
 Insertion sort
+
 Sorting algorithm for arrays
 
 Time Complexity: O(n * n) = O(n^2)
