@@ -76,6 +76,7 @@ Space complexity wise is technically the same as O(n * m), however it is
 technically O(n * m * 26) for the length of count array, however it is a 
 constant so it is not accounted for.
 '''
+
 from collections import defaultdict
 
 def HashMapEncode(strs):
