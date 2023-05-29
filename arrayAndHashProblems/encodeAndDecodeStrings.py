@@ -14,7 +14,22 @@ One possible encode method is: "lint:;code:;love:;you"
 '''
 
 
+'''
+Possible Soltuion
 
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+For encoding, for each index value in strs, append it to res with ':;'at the end.
+Make sure to commit to a substring res value. For decode, for through res with 
+an index iterator and a curr_split to indicate when you last split the string.
+everytime a ':' is found and the next value in the string is ';', append the 
+substring to res array.
+
+As both of these need strings and arrays to convert one to the other and they
+both use a iterator through the entire data structure that holds the data, the
+space and time complexity are both O(n).
+'''
 
 def encode(strs):
     res = ""
