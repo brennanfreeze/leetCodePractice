@@ -26,6 +26,24 @@ Constraints:
 
 '''
 Possible Solution: Binary Search Tree To Array
+Time complexity: O(n^2)
+Space complexity: O(n)
+
+There are many ways to solve this problem, such as using heap sort, quick sort, 
+and merge sort. This method implements a binary search tree first to sort through
+the values. Within the question it is possible to have multiple of the same 
+values, so to handle that the binary search tree sets the duplicate value to the
+left branch of the node. After the binary search tree is set up, It uses a DFS
+algorithm to append to an array each value it encounters from the left side
+first, then the root node, then the right side of the tree. Finally, it returns
+the array of values. 
+
+As there is no added parameter to confirm that the binary search tree is 
+balanced (ex: if 1-10000 was added in linear fashion and 10001 was needed to be
+added, it would technically be a glorified array) the worst time case is going 
+to be O(n) for inserting values. To get worst time complexity of log2n, a 
+implementation of an AVL or a black and red algorithm would need to be done. 
+Space complexity of the
 '''
 
 class Node:
