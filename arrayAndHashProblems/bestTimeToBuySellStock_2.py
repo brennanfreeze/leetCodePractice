@@ -32,6 +32,16 @@ Possible Solution: Greedy Algorithm
 Time Complexity: O(n)
 Space Complexity: O(1)
 
+Start with a base max value called ma which is set to within range of 1 to the 
+length of the array of prices, if prices at i is greater
+than the prices at i - 1, we can determine there was an increase in price from
+the day before and we should sell the stock we bought it at. The variable ma adds
+up the difference between value at index i and i - 1 and continues through the 
+array and finally returns ma as the return value.
+
+As there is no needed extra memory for this solution, the space complexity is 
+going to be O(1) and the time complexity being bound by the input array length, 
+is going to be O(n).
 '''
 
 def Greedy(prices):

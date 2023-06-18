@@ -33,6 +33,11 @@ Possible Solution: Use n^2 Sorting Algorithm
 
 Time Complexity: O(n^2)
 Space Complexity: O(1)
+
+Please check out the description in the dsaBasics directory for a detailed
+explanation of how bubble sort is working. This is mainly to show that any
+sorting algorithm technically can be done to solve this problem but they are
+not efficient nor the right tool for a bounded amount of different values.
 '''
 
 def BubbleSort(nums):
@@ -56,6 +61,20 @@ Possible Solution: Use Dutch Flag Algorithm
 Time Complexity: O(n)
 Space Complexity: O(1)
 
+Set three variables as low, mid, and high where low and mid are set to 0 and 
+high is set to the length of the nums. while mid <= high (used to determine when
+the 1's and 2's sections meet) determine what the current middle value is equal
+to. If it is equal to 0, switch the low index (0 section) with the middle and 
+increment both low and mid (need to do this for low variable to keep the value
+that was just sorted). If the value is equal to 2, do the same thing for 
+the mid and high value and only set the high value to -1 of itself (the curr mid
+value has not been determined if it is in the right spot so if one were to 
+implement mid += 1 then there would be unsorted values). Finally, if it is equal
+to one, just increment the mid value by one as it is in the current right spot.
+
+As there is no need for extra space complexity and the entire algorithm is 
+bounded by the length of nums, the time complexity is O(n) and the space 
+complexity is O(1).
 '''
 
 def DutchFlag(nums):

@@ -41,8 +41,3 @@ def AppendToEnd(nums):
     # or just do return nums + nums instead of this
     return nums
 
-
-'''
-
-
-'''

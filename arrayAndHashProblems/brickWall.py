@@ -30,6 +30,22 @@ sum(wall[i]) is the same for each row i.
 
 '''
 Possible Solution: Length Minus Max Gaps
+Time complexity: O(n)
+Space complexity: O(n)
+
+Set a hash table called gap and iterate through each row in the brick wall.
+Set a variable called curr to go through the current amount of gaps the 
+segment in the wall has. Set the value stored in the dictionary at curr to 1 + 
+the current amount in the dictionary for each time it sees that gap. Finally, 
+return the length of the wall minus the max value in the dictionary. This 
+algorithm relies heavily on the len(wall) - max(gap.values()) and the counting 
+of gaps it has encountered. This gets a somewhat similar idea to the mean value
+of maximum amount of gaps which resolves itself to the minimum amount of bricks
+to cross.
+
+As the dictionary is needed for this solution and the iteration through the walls
+does not repeat a value/the length of each row is bound by the length of wall,
+the space and time complexity is O(n).
 '''
 
 def LengthMinusMaxGaps(wall):
