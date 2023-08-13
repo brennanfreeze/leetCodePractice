@@ -45,7 +45,7 @@ Space complexity: O(1)
 Create two pointers, l and r to represent the start and ending of the nums 
 array. While l is less than or equal to r pointer, set a variable m to the 
 halfway point between those two pointers. If the value at index m is the 
-target, return the index of m. If not, two determinats come into play to 
+target, return the index of m. If not, two determinants come into play to 
 find how the array is rotated. If the value at index m is greater than or equal
 to the value at index l, then we know that the array is sorted on the left side,
 but this could also mean than [1,2,3,0] where m is at 2 and left is at 1, so 
