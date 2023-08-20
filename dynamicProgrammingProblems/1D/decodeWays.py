@@ -49,17 +49,29 @@ Possible Solution: Memoization
 """
 
 def Memoization(s: str) -> int:
+  
   d = {len(s): 1}
+  
   def dfs(i: int) -> int:
+    
     if i in d:
+      
       return d[i]
+    
     if s[i] == "0":
+      
       return 0
+    
     res = dfs(i + 1)
+    
     if i + 1 < 26 and (s[i] == "1" or s[i] == "2" and s[i + 1] in "0123456"):
+      
       res += dfs(i + 2)
+      
     d[i] = res
+    
     return res
+  
   return dfs(0)
 
 """
@@ -67,14 +79,22 @@ Possible Solution: Dynamic Programming
 """
 
 def DynamicProgramming(s: int) -> int:
+  
   d = {len(s) : 1}
+  
   for i in range(len(s) - 1, -1, -1):
+    
     if s[i] == "0":
+      
       d[i] = 0
+      
     else:
+      
       d[i] = d[i + 1]
       
       if (i + 1 < len(s) and (s[i] == "1" or s[i] == "2" and (s[i + 1] in "0123456" ))):
+        
         d[i] += d[i + 2]
+        
   return d[0]
         

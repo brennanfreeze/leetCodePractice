@@ -58,20 +58,35 @@ other, the runtime is O(n) and the space complexity is O(1).
 """
 
 def TwoVariables(nums) -> int:
+  
   if len(nums) == 1:
+    
     return nums[0]
+  
   o = 0
+  
   t = 0
+  
   for i in nums[:len(nums) - 1]:
+    
     te = max(o + i, t)
+    
     o = t
+    
     t = te
+    
   res = t
+  
   o = 0
+  
   t = 0
+  
   for i in nums[1:]:
+    
     te = max(i + o, t)
+    
     o = t
+    
     t = te
     
   return max(res, t)

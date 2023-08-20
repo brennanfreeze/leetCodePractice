@@ -51,10 +51,17 @@ complexity is going to be O(n) and the space complexity is going to be O(1).
 """
 
 def TwoVariables(nums) -> int:
+  
   o = 0
+  
   t = 0
+  
   for i in nums:
+    
     te = max(i + o, t)
+    
     o = t
+    
     t = te
+    
   return t
